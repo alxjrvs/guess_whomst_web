@@ -1,3 +1,44 @@
 {
-  "extends": ["next", "next/core-web-vitals"]
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "tailwindcss", "cypress", "prettier", "jsx-a11y"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:cypress/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:tailwindcss/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier/prettier",
+    /* prettier plugin
+    must be last in this list of
+    javascript lint rules
+    -- Ian D. + Alex J. */
+    "prettier"
+  ],
+  "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": 0
+  },
+  "overrides": [
+    {
+      "files": ["**/*.js", "**/*.jsx"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": 0
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "tailwindcss": {
+      "cssFiles": ["styles/globals.css"],
+      "whitelist": ["brightness\\-0"]
+    }
+  }
 }
