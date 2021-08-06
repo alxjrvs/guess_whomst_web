@@ -6,7 +6,7 @@ const Home: FC = () => {
       <h1> Guess Whomst </h1>
       <h2> A Game Of Subjective Judgements </h2>
 
-      <button> JOIN </button>
+      <a href="https://radiant-peak-45617.herokuapp.com/surprise"> WITNESS </a>
     </section>
   )
 }
